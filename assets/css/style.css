@@ -1,0 +1,191 @@
+/* Add your CSS styles here */
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    color: #333;
+    background: url('../images/background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Navbar */
+/* Navbar General Styling */
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-between; /* Ensure items are spaced evenly */
+    align-items: center; /* Vertically center the items */
+    max-width: 1200px; /* Restrict the maximum width */
+    width: 100%; /* Allow full width on smaller screens */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Add spacing inside the container */
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: gold;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-brand img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Navbar Links */
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px; /* Add spacing between nav items */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: 2px solid gold;
+    color: gold;
+    text-align: center;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: gold;
+    color: black;
+}
+
+/* Mobile Responsive Adjustments */
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D'http://www.w3.org/2000/svg' viewBox%3D'0 0 30 30'%3E%3Cpath stroke%3D'rgba(255, 215, 0, 0.7)' stroke-width%3D'2' d%3D'M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    width: 24px;
+    height: 24px;
+}
+
+/* Padding Adjustment for Body */
+body {
+    padding-top: 70px; /* Prevent content overlap with fixed navbar */
+}
+
+
+/* Auth Container */
+
+.auth-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 70px; /* To avoid overlap with navbar */
+    text-align: center;
+}
+
+/* Form Title */
+.auth-container h2 {
+    font-size: 2rem;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+/* Input Fields and Dropdown */
+.auth-container .form-control {
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%; /* Ensure consistent width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.auth-container .form-control:focus {
+    border-color: gold;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+/* Dropdown Specific */
+.auth-container select.form-control {
+    background-color: #fff;
+    appearance: none; /* Remove default browser dropdown styling */
+}
+
+/* Submit Button */
+.auth-container .btn-primary {
+    background-color: gold;
+    color: black;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Ensure button matches input and dropdown width */
+    transition: all 0.3s;
+}
+
+.auth-container .btn-primary:hover {
+    background-color: #d4af37;
+    color: white;
+}
+
+/* Footer Link */
+.auth-container p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.auth-container a {
+    color: gold;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .auth-container {
+        width: 90%;
+        margin-top: 50px;
+    }
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+
