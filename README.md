@@ -1,142 +1,117 @@
 # 🏡 Property Management Website
 
-A full-stack web platform for seamless property registration, management, and discovery, built with a focus on **buyers**, **sellers**, and **administrators**. This project delivers intuitive dashboards, advanced search features, real-time analytics, and a responsive UI—offering an all-in-one solution for the modern real estate market.
+An intuitive and responsive web application for efficient property listing, search, and management. This PHP-based system caters to **buyers**, **sellers**, and **administrators** with role-specific dashboards, secure authentication, and smooth user interaction through CSS transitions and animations.
+
+---
 
 ## 📌 Project Summary
 
-We aim to build a versatile, secure, and user-friendly **Property Management Platform** using modern web technologies. The system offers:
+This Property Management Platform enables:
 
-- 🏠 Property listing and management tools for sellers  
-- 🔍 Advanced search and wishlist features for buyers  
-- 📊 Admin dashboards for system monitoring and analytics  
+- 🏠 Sellers to list, update, and manage properties  
+- 🔍 Buyers to search, filter, and wishlist properties  
+- 📊 Admins to monitor analytics and manage user accounts  
 
-The platform includes **secure login**, **role-based dashboards**, and **responsive UI** with **CSS animations**, making the experience smooth across devices.
+Built using **PHP**, **HTML/CSS**, and **JavaScript**, the platform ensures a lightweight, mobile-friendly experience with smooth animations and secure login flows.
 
 ---
 
 ## 📄 Functional Overview
 
 ### 🔐 User Registration
-- Secure sign-up for Buyers, Sellers, and Admins
-- Password encryption using bcrypt
-- Role selection during registration
-- Optional email verification
+- Secure role-based registration (Buyer, Seller, Admin)
+- Field validation and encrypted passwords
+- User role determines dashboard access
+- Optionally supports email verification (future scope)
 
 ### 🧭 Role-Based Dashboards
 
-| Role        | Features                                                                 |
+| Role        | Key Features                                                             |
 |-------------|--------------------------------------------------------------------------|
-| **Buyer**   | Search with filters, save to wishlist, contact sellers                   |
-| **Seller**  | Add/update/delete listings, upload images, view tax estimate             |
-| **Admin**   | Manage users, track analytics, generate reports, oversee platform health |
+| **Buyer**   | Property search with filters, save listings to wishlist, contact sellers |
+| **Seller**  | Add/edit/delete listings, upload images, manage property details         |
+| **Admin**   | User & property oversight, analytics monitoring, report generation       |
 
-### 🔎 Search & Wishlist
-- Filters: Price, Location, Amenities
-- Save favorites to personal wishlists
-- Real-time feedback and smooth UI interactions
+### 🔎 Buyer Features
+- Advanced search (price, location, size, amenities)
+- Wishlist functionality for favorites
+- Interactive property cards with hover effects
 
 ### 📊 Admin Analytics
-- Charts and metrics using Chart.js / D3.js
-- Track active users, most viewed properties, regional interest
-- User account and role management
+- Basic charts with Chart.js
+- Track active users, listing trends, and regional activity
+- User account management from the dashboard
 
 ---
 
 ## 💻 Homepage Features
 
-- Clean and responsive landing page
-- Register/login options by role
-- Smooth navigation to dashboards post-login
-- Animated transitions and hover effects
+- Clean UI with role-based login and registration
+- Secure login redirect to user-specific dashboard
+- Responsive design and animated transitions
 
 ---
 
 ## 🎨 CSS Transitions & Effects
 
-- **Fade-In/Fade-Out:** Smooth page transitions
-- **Slide Transitions:** Switch dashboards with animations
-- **Hover Effects:** Buttons and property cards animate on hover
-- **Animated Search Field:** Expands and highlights on focus
-- **Chart Animations:** Visual analytics with smooth rendering
+- **Fade-In/Out** – Page transitions between routes  
+- **Slide Animations** – Dashboard and modal transitions  
+- **Hover Effects** – Interactive cards and buttons  
+- **Search Field Animation** – Focus-expand UX  
+- **Chart Animation** – Smooth analytics visuals
 
 ---
-## Use Case Diagram
-![image](https://github.com/user-attachments/assets/a2c96434-3438-405c-a11f-3a5c7cebfb13)
 
 ## 📱 User Experience
 
-- 🔄 Responsive design for mobile and desktop  
-- 🚀 Fast loading and intuitive UI  
-- 🧭 Simple navigation based on user role  
-- 🎯 Accessible and clearly labeled actions
-
----
-## 🚀 Getting Started
-
-Follow these steps to set up and run the Property Management Website locally.
+- 📲 Mobile-first responsive layout  
+- 🧭 Simple and clear role-based navigation  
+- 🧩 Dynamic UI components powered by CSS3  
+- 🧪 Tested for usability and visual consistency  
 
 ---
 
-### 📦 Prerequisites
+## 🚀 How to Run Locally
 
-Make sure the following are installed on your system:
+### 🛠️ Prerequisites
 
-- [Node.js](https://nodejs.org/) (v14 or higher recommended)  
-- [MongoDB](https://www.mongodb.com/) or [MySQL](https://www.mysql.com/)  
-- Git (optional but recommended)
+- PHP 7.x or later  
+- A local server (XAMPP, MAMP, or WAMP)  
+- A browser (Chrome, Firefox, Safari)
 
----
+### 🔧 Setup Steps
 
-### 🔧 Installation Steps
-
-1. **Clone the repository**
+1. **Clone or Download the Project**
 
 ```bash
-git clone https://github.com/your-username/property-management-platform.git
-cd property-management-platform
+git clone https://github.com/your-username/property-management-php.git
 ```
-2. Install backend dependencies
+2. **Move Folder to Server Root**
+XAMPP/MAMP: Move folder into /htdocs/  
+WAMP: Move into /www/
+
+3. Start Apache Server
+Open XAMPP/MAMP, start Apache
+Visit in browser:
 ```
-npm install
+http://localhost/property-management-php
 ```
-3. Set up environment variables
-Create a .env file in the root directory and add the following (adjust based on your DB/auth system):
-```
-PORT=5000
-DB_URI=mongodb://localhost:27017/property-db
-JWT_SECRET=your_jwt_secret
-```
-4. Run the development server
-```
-npm start
-```
-## 🧪 Testing Strategy
+4. (Optional) Setup MySQL
+Import the included .sql file into phpMyAdmin  
+Update DB config in db.php
 
-### ✅ Test Cases
+## 🛠️ Tech Stack
+Frontend: HTML5, CSS3, JavaScript  
+Backend: PHP  
+Styling & UX: CSS transitions, animations, hover effects  
+Database: MySQL (optional, configurable via db.php)  
+Analytics: Chart.js
 
-1. **Navigation Testing** – Ensure dashboard and page routing across devices  
-2. **Usability Testing** – Gather user feedback on functionality and layout  
-3. **Refinement Loop** – Iterate improvements based on testing and feedback  
+## 🔮 Future Enhancements
+✉️ Email verification during sign-up  
+💬 Real-time chat between buyers and sellers  
+📍 Google Maps API for property location  
+📱 Convert to Progressive Web App (PWA)
 
----
-
-## 🛠️ Technologies Used
-
-- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap  
-- **Backend**: Node.js, Express.js (or preferred stack)  
-- **Database**: MongoDB / MySQL (based on implementation)  
-- **Charting**: Chart.js / D3.js  
-- **Authentication**: bcrypt, role-based auth system
-
----
-
-## 🔄 Future Enhancements
-
-- Real-time chat between buyers and sellers  
-- AI-based property recommendations  
-- Integration with external map APIs  
-- Progressive Web App (PWA) support  
-
----
 
 
